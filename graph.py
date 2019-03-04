@@ -4,10 +4,10 @@ class Graph:
     def __init__(self):
         self.vertices = {}
         self.vertices_number = 0
-        self.start = ''
-        self.finish = ''
-        self.nearby = {}
-        self.error = ""
+        self.start = '' # start route vertex
+        self.finish = '' # finish route vertex
+        self.nearby = {} # Time and starting point to find all nearby reachable nodes
+        self.error = "" # If graph can not be used (example destination is wrong)
 
     def __iter__(self):
         return iter(self.vertices.values())

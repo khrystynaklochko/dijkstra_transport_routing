@@ -3,3 +3,5 @@ dijkstra.pyc
 graph.pyc
 vertex.pyc
 output.txt
+.pytest_cache
+test/__pycache__/*

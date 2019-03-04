@@ -7,7 +7,7 @@ class Vertex:
         self.distance = sys.maxint
         self.visited = False
         self.previous = None
-        self.reachable_for_time = {}
+        self.reachable_for_time = {} # Dictionary to store all reachable vertices for a given time
 
     def set_distance(self, dist):
         self.distance = dist
