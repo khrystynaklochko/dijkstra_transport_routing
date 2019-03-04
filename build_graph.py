@@ -19,9 +19,14 @@ def build_graph(file_path):
           vertices_number -=1
     line = file_path.readline()
     route = re.split('->',line.strip('\n').replace('route', ' ').replace(" ", ""))
-    g.set_start(route[0])
-    g.set_finish(route[1])
-    line = file_path.readline()
-    nearby = re.split(',',line.strip('\n').replace('nearby', ' ').replace(" ", ""))
-    g.set_nearby(nearby[0], nearby[1])
+
+    if route[0] and route[1] in vertices:
+       g.set_start(route[0])
+       g.set_finish(route[1])
+       line = file_path.readline()
+       nearby = re.split(',',line.strip('\n').replace('nearby', ' ').replace(" ", ""))
+       g.set_nearby(nearby[0], nearby[1])
+    else:
+       g.set_error("Not possible to find a route")
+
     return g

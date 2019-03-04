@@ -4,6 +4,10 @@ class Graph:
     def __init__(self):
         self.vertices = {}
         self.vertices_number = 0
+        self.start = ''
+        self.finish = ''
+        self.nearby = {}
+        self.error = ""
 
     def __iter__(self):
         return iter(self.vertices.values())
@@ -35,10 +39,10 @@ class Graph:
     def get_vertices(self):
         return self.vertices.keys()
 
-
     def get_previous(self):
         return self.previous
-        def set_start(self, start):
+
+    def set_start(self, start):
         self.start = start
 
     def set_finish(self, finish):
@@ -51,7 +55,13 @@ class Graph:
         return self.finish
 
     def set_nearby(self, vertex, distance):
-        self.nearby = { vertex: distance }
+        self.nearby = { self.get_vertex(vertex): distance }
 
     def get_nearby(self):
         return self.nearby
+
+    def set_error(self, error_message):
+        self.error = error_message
+
+    def get_error(self):
+        return self.error
