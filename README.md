@@ -48,8 +48,19 @@ C: 70, B: 130, D: 120
 ```
 ## Testing
 
+Install pytest:
+
+```python
+pip install pytest
 ```
 
-```
+Run test:
 
+```python
+python -m pytest ./test/
+```
 ## Future improvements
+
+- Add more flags for cli.
+- Add more test cases.
+- Improve Dijkstra with modifications for float and extremely big graphs.
