@@ -12,7 +12,7 @@ class Vertex:
         self.distance = dist
 
     def set_adjacent(self, adj, weight=0):
-        self.adjacent[adj] = weight
+        self.adjacent[adj] = int(weight)
 
     def set_previous(self, prev):
         self.previous = prev

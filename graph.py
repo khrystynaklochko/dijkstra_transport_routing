@@ -38,3 +38,20 @@ class Graph:
 
     def get_previous(self):
         return self.previous
+        def set_start(self, start):
+        self.start = start
+
+    def set_finish(self, finish):
+        self.finish = finish
+
+    def get_start(self):
+        return self.start
+
+    def get_finish(self):
+        return self.finish
+
+    def set_nearby(self, vertex, distance):
+        self.nearby = { vertex: distance }
+
+    def get_nearby(self):
+        return self.nearby
