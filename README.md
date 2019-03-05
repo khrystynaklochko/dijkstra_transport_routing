@@ -46,6 +46,28 @@ And in output file you will see:
 A -> C -> B: 130
 C: 70, B: 130, D: 120
 ```
+
+## Project structure
+Project tree:
+```python
+  graph:
+    - graph_tools:
+      - models
+        graph
+        vertex
+      build_graph
+      dijkstra
+      graph_tools_runner
+    - test:
+      cli_test
+      test_dijkstra
+  cli
+  requirements
+```
+- graph_tools folder has models and utils to create Graph and find shortest path.
+- test folder contains sytem and integration tests.
+- cli.py is a main CLI file with commands to run.
+
 ## Testing
 
 Install pytest:

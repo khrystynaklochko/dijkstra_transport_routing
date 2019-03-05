@@ -7,6 +7,8 @@ def shortest_path(v, path):
         shortest_path(v.previous, path)
     return
 
+
+
 def dijkstra(route, start_vertice, nearby):
     start_vertice.set_distance(0) # Start
 
@@ -33,7 +35,6 @@ def dijkstra(route, start_vertice, nearby):
         not_visited_vertices = [(v.get_distance(),v) for v in route if not v.visited]
         heapq.heapify(not_visited_vertices) # Adding not visted to a queue
 
-        print fresh_vertices
         # Taking all reachable nodes by time from queue
         for v in fresh_vertices:
             if 0 < fresh_vertices[0] <= int(nearby[start_vertice]):

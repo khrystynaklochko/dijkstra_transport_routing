@@ -1,4 +1,4 @@
-from graph import Graph
+from models.graph import Graph
 import re
 
 # Utility to read Graph data from file and construct Graph and Vertex objects

@@ -1,10 +1,10 @@
 import pytest
 import re
 import heapq
-from graph import Graph
-from build_graph import build_graph
-from dijkstra import dijkstra
-from dijkstra import shortest_path
+from graph_tools.models.graph import Graph
+from graph_tools.build_graph import build_graph
+from graph_tools.dijkstra import dijkstra
+from graph_tools.dijkstra import shortest_path
 
 
 def test_dijkstra_easy():
@@ -61,7 +61,7 @@ def test_dijkstra_dead_ends():
     g.set_edge('D', 'C', 1)
     g.set_edge('A', 'H', 0)
 
-    g.set_nearby("A", 2)
+    g.set_nearby('A', 2)
 
     dijkstra(g, g.get_vertex('A'), g.get_nearby())
     target = g.get_vertex('D') # Destination point
