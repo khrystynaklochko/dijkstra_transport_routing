@@ -1,11 +1,11 @@
 import pytest
 import re
 import heapq
+
 from graph_tools.models.graph import Graph
 from graph_tools.build_graph import build_graph
 from graph_tools.dijkstra import dijkstra
 from graph_tools.dijkstra import shortest_path
-
 
 def test_dijkstra_easy():
     g = Graph()

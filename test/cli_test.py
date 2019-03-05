@@ -19,10 +19,12 @@ from graph_tools.graph_tools_runner import graph_tools_runner
 def main(input_file, output_file):
     g = build_graph(input_file)
     if g.get_error() == "": # If text file is valid and Graph can be readable
+
        path_output, reachable_destinations = graph_tools_runner(g, input_file)
 
        click.echo(path_output)
        output_file.write(str(path_output) + '\n')
+
        click.echo(reachable_destinations)
        output_file.write(str(reachable_destinations))
     else:
